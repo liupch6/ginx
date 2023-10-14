@@ -14,8 +14,8 @@ import (
 type Builder struct {
 	prefix   string
 	cmd      redis.Cmdable
-	interval time.Duration
-	rate     int // 阈值
+	interval time.Duration // 窗口大小
+	rate     int           // 阈值
 }
 
 //go:embed slide_window.lua
